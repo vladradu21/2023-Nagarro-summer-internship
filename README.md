@@ -35,3 +35,6 @@ Users have the option to include one-time transactions
 
 Alternatively, users can input recurring transactions with various repetition frequencies.
 <img width="447" alt="image" src="https://github.com/vladradu21/2023-Nagarro-summer-internship/assets/117584846/e882e9d7-7226-4fc3-9f5c-4f6471ea1832">
+
+Comprehensive transaction details can be exported in an Excel file format:
+<img width="789" alt="image" src="https://github.com/vladradu21/2023-Nagarro-summer-internship/assets/117584846/33139754-682a-48f9-bca8-eafd9f308481">
