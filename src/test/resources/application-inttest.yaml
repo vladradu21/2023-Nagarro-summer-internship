@@ -1,0 +1,11 @@
+spring:
+  config:
+    activate:
+      on-profile: inttest
+  datasource:
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
+    url: jdbc:tc:mysql:8.0.33:///pbadb
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:test}
+jwt:
+  secret-key: "ThisIsASecretKeyForHmac256BitThisIsJustATestabcdeabcdacbdcabd"

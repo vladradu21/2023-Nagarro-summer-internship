@@ -1,0 +1,57 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/
+  error:
+    include-message: always
+spring:
+  application:
+    name: pba
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/pbadb
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSWORD:admin}
+  flyway:
+    enabled: true
+    validate-on-migrate: true
+    locations: classpath:db/migration
+    configuration:
+      driver: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/pbadb
+      user: ${DB_USERNAME:root}
+      password: ${DB_PASSWORD:admin}
+      baselineOnMigrate: true
+      schemas:
+        - public
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: pbateam02@gmail.com
+    password: jesaxhsushlxpfgf
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  app:
+    url: "http://localhost:8080"
+    verifyTokenEndpoint: "/api/verification?token=%s"
+jwt:
+  secret-key: 2zCGWqdyNBzitg9NijPcA61819rfeSXg8ETEg3z8DNKmRgFn0EJa5YkBVf7QIcIA
+bnr:
+  url: https://www.bnr.ro/nbrfxrates.xml
+logging:
+  level:
+    root: WARN
+    com.nagarro.si.pba: INFO
+  file:
+    name: logs/appLog.log
+  pattern:
+    file: "%d [%level] %c{1.} [%t] %m%n"
+  logback:
+    rolling policy:
+      file-name-pattern: "logs/appLog.%d{yyyy-MM-dd}.%i.log"
+      max-history: 3
+      clean-history-on-start: true

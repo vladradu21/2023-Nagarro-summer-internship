@@ -1,0 +1,19 @@
+<DataSet xmlns="http://www.bnr.ro/xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bnr.ro/xsd nbrfxrates.xsd">
+    <Header>
+        <Publisher>National Bank of Romania</Publisher>
+        <PublishingDate>2023-07-25</PublishingDate>
+        <MessageType>DR</MessageType>
+    </Header>
+    <Body>
+        <Subject>Reference rates</Subject>
+        <OrigCurrency>RON</OrigCurrency>
+        <Cube date="2023-07-25">
+            <Rate currency="AED">1.2126</Rate>
+            <Rate currency="AUD">3.0134</Rate>
+            <Rate currency="BGN">2.5154</Rate>
+            <Rate currency=>0.9422</Rate>
+            <Rate currency="CAD">3.3805</Rate>
+            <Rate currency="CHF">5.1245</Rate>
+        </Cube>
+    </Body>
+</DataSet>
